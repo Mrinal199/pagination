@@ -59,7 +59,7 @@ function App() {
         </tbody>
       </table>
       <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
+        {currentPage > 1 && <button onClick={prevPage}>Previous</button>}
         <button disabled>{currentPage}</button>
         <button onClick={nextPage} disabled={currentPage === Math.ceil(employees.length / 10)}>Next</button>
       </div>
